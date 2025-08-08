@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseAppHost>true</UseAppHost>
+		<AssemblyName>OmniDownloader</AssemblyName>
+		<RootNamespace>OmniDownloader</RootNamespace>
+		
+		<!-- Project Metadata -->
+		<AssemblyTitle>OmniDownloader</AssemblyTitle>
+		<Product>OmniDownloader</Product>
+		<AssemblyDescription>Cross-platform download utility with enterprise-grade UI. A modern .NET GUI application that provides a clean, responsive interface for file downloading with real-time progress tracking.</AssemblyDescription>
+		<Copyright>© 2025 Tomer Alcavi</Copyright>
+		<AssemblyCompany>Tomer Alcavi</AssemblyCompany>
+		<Authors>Tomer Alcavi</Authors>
+		<PackageProjectUrl>https://github.com/alcavix/OmniDownloader</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/alcavix/OmniDownloader</RepositoryUrl>
+		<Version>0.9.1</Version>
+		<AssemblyVersion>0.9.1.0</AssemblyVersion>
+		<FileVersion>0.9.1.0</FileVersion>
+		
+		<!-- Warning Suppressions -->
+		<NoWarn>$(NoWarn);IL2026;IL2104</NoWarn>
+		<TrimmerSingleWarn>false</TrimmerSingleWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Avalonia" Version="11.1.4" />
+		<PackageReference Include="Avalonia.Desktop" Version="11.1.4" />
+		<PackageReference Include="Avalonia.Themes.Fluent" Version="11.1.4" />
+		<PackageReference Include="Avalonia.ReactiveUI" Version="11.1.4" />
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<AvaloniaResource Include="**/*.xaml" />
+	</ItemGroup>
+
+</Project>

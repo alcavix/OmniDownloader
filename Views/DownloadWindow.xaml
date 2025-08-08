@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="OmniDownloader.Views.DownloadWindow"
+        Title="{Binding Title}"
+        Width="420"
+        Height="250"
+        MinWidth="380"
+        MinHeight="250"
+        MaxWidth="500"
+        MaxHeight="350"
+        WindowStartupLocation="CenterScreen"
+        CanResize="true"
+        Background="#FAFAFA">
+    
+    <Window.Styles>
+        <Style Selector="TextBlock.header">
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+        </Style>
+        <Style Selector="TextBlock.body">
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="Foreground" Value="#5D6D7E"/>
+        </Style>
+        <Style Selector="TextBlock.label">
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="Foreground" Value="#7F8C8D"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+        </Style>
+        <Style Selector="Button.primary">
+            <Setter Property="Background" Value="#3498DB"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Name="PART_Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter Name="PART_ContentPresenter"
+                                        Content="{TemplateBinding Content}"
+                                        HorizontalContentAlignment="Center"
+                                        VerticalContentAlignment="Center"
+                                        TextBlock.Foreground="{TemplateBinding Foreground}"
+                                        TextBlock.FontSize="{TemplateBinding FontSize}"
+                                        TextBlock.FontWeight="{TemplateBinding FontWeight}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+        <Style Selector="Button.primary:pointerover">
+            <Setter Property="Background" Value="#2980B9"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.primary:pressed">
+            <Setter Property="Background" Value="#21618C"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        
+        <Style Selector="Button.secondary">
+            <Setter Property="Background" Value="#ECF0F1"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="BorderBrush" Value="#BDC3C7"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Name="PART_Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter Name="PART_ContentPresenter"
+                                        Content="{TemplateBinding Content}"
+                                        HorizontalContentAlignment="Center"
+                                        VerticalContentAlignment="Center"
+                                        TextBlock.Foreground="{TemplateBinding Foreground}"
+                                        TextBlock.FontSize="{TemplateBinding FontSize}"
+                                        TextBlock.FontWeight="{TemplateBinding FontWeight}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+        <Style Selector="Button.secondary:pointerover">
+            <Setter Property="Background" Value="#D5DBDB"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+            <Setter Property="BorderBrush" Value="#A6ACAF"/>
+        </Style>
+        <Style Selector="Button.secondary:pressed">
+            <Setter Property="Background" Value="#BFC9CA"/>
+            <Setter Property="Foreground" Value="#2C3E50"/>
+            <Setter Property="BorderBrush" Value="#85929E"/>
+        </Style>
+        
+        <Style Selector="Button.success">
+            <Setter Property="Background" Value="#27AE60"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="CornerRadius" Value="3"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Padding" Value="12,6"/>
+            <Setter Property="Template">
+                <ControlTemplate>
+                    <Border Name="PART_Border"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter Name="PART_ContentPresenter"
+                                        Content="{TemplateBinding Content}"
+                                        HorizontalContentAlignment="Center"
+                                        VerticalContentAlignment="Center"
+                                        TextBlock.Foreground="{TemplateBinding Foreground}"
+                                        TextBlock.FontSize="{TemplateBinding FontSize}"
+                                        TextBlock.FontWeight="{TemplateBinding FontWeight}"/>
+                    </Border>
+                </ControlTemplate>
+            </Setter>
+        </Style>
+        <Style Selector="Button.success:pointerover">
+            <Setter Property="Background" Value="#229954"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+        <Style Selector="Button.success:pressed">
+            <Setter Property="Background" Value="#1E8449"/>
+            <Setter Property="Foreground" Value="White"/>
+        </Style>
+    </Window.Styles>
+    
+    <Border Background="White" 
+            BorderBrush="#E8E8E8" 
+            BorderThickness="1" 
+            CornerRadius="4"
+            Margin="8">
+        <Grid Margin="16" RowDefinitions="Auto,Auto,Auto,Auto,Auto,20,Auto">
+            
+            <!-- Header Section -->
+            <StackPanel Grid.Row="0" Margin="0,0,0,12">
+                <TextBlock Text="{Binding Title}"
+                           Classes="header"
+                           HorizontalAlignment="Left"
+                           TextTrimming="CharacterEllipsis"
+                           Margin="0,0,0,4" />
+                <TextBlock Text="{Binding Description}"
+                           Classes="body"
+                           TextWrapping="Wrap"
+                           IsVisible="{Binding HasDescription}"
+                           Margin="0,0,0,0" />
+            </StackPanel>
+            
+            <!-- Status Section -->
+            <Border Grid.Row="1" 
+                    Background="#F8F9FA" 
+                    BorderBrush="#E9ECEF" 
+                    BorderThickness="1" 
+                    CornerRadius="3" 
+                    Padding="12,8" 
+                    Margin="0,0,0,12">
+                <TextBlock Text="{Binding StatusMessage}"
+                           Classes="body"
+                           HorizontalAlignment="Center"
+                           FontWeight="Medium" />
+            </Border>
+            
+            <!-- Progress Section -->
+            <StackPanel Grid.Row="2" Margin="0,0,0,12">
+                <Grid ColumnDefinitions="*,Auto" Margin="0,0,0,4">
+                    <TextBlock Grid.Column="0" 
+                               Text="Progress" 
+                               Classes="label" />
+                    <TextBlock Grid.Column="1" 
+                               Text="{Binding ProgressPercentage, StringFormat={}{0:P1}}" 
+                               Classes="label"
+                               FontWeight="SemiBold" />
+                </Grid>
+                <ProgressBar Value="{Binding ProgressPercentage}"
+                             Minimum="0"
+                             Maximum="1"
+                             Height="8"
+                             Background="#E9ECEF"
+                             Foreground="#3498DB"
+                             CornerRadius="4" />
+            </StackPanel>
+            
+            <!-- Stats Section -->
+            <Grid Grid.Row="3" ColumnDefinitions="*,*" Margin="0,0,0,12">
+                <StackPanel Grid.Column="0">
+                    <TextBlock Text="Speed" Classes="label" Margin="0,0,0,2" />
+                    <TextBlock Text="{Binding DownloadSpeed}" 
+                               Classes="body" 
+                               FontWeight="SemiBold" />
+                </StackPanel>
+                <StackPanel Grid.Column="1">
+                    <TextBlock Text="Time Remaining" Classes="label" Margin="0,0,0,2" />
+                    <TextBlock Text="{Binding EstimatedTimeRemaining}" 
+                               Classes="body" 
+                               FontWeight="SemiBold" />
+                </StackPanel>
+            </Grid>
+            
+            <!-- Error Message -->
+            <Border Grid.Row="4"
+                    IsVisible="{Binding HasError}"
+                    Background="#FDEDEC"
+                    BorderBrush="#E74C3C"
+                    BorderThickness="1"
+                    CornerRadius="3"
+                    Padding="12,8"
+                    Margin="0,0,0,8">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="⚠" 
+                               FontSize="14" 
+                               Foreground="#E74C3C" 
+                               VerticalAlignment="Center" 
+                               Margin="0,0,8,0" />
+                    <TextBlock Text="{Binding ErrorMessage}"
+                               Classes="body"
+                               Foreground="#C0392B"
+                               TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>
+            
+            <!-- Action Buttons -->
+            <StackPanel Grid.Row="6" Orientation="Horizontal" HorizontalAlignment="Right" Spacing="8">
+                <!-- Post-Action Buttons (when download is complete) -->
+                <Button Content="Open File"
+                        Command="{Binding OpenFileAndCloseCommand}"
+                        Classes="success"
+                        IsVisible="{Binding ShowPostActionPrompt}" />
+                        
+                <Button Content="Show in Folder"
+                        Command="{Binding OpenFileCommand}"
+                        Classes="primary"
+                        IsVisible="{Binding ShowPostActionPrompt}" />
+                        
+                <!-- Standard buttons -->
+                <Button Content="Cancel"
+                        Command="{Binding CancelDownloadCommand}"
+                        Classes="secondary"
+                        IsVisible="{Binding !IsDownloadComplete}" />
+                
+                <Button Content="Close"
+                        Command="{Binding CloseWindowCommand}"
+                        Classes="primary"
+                        IsVisible="{Binding IsDownloadComplete}" />
+            </StackPanel>
+            
+        </Grid>
+    </Border>
+</Window>
