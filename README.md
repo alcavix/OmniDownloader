@@ -118,6 +118,8 @@ This project is provided as-is for educational and demonstration purposes.
 - **Contributors** - Everyone who helps improve this project
 - **Tomer Alcavi** - Original creator and maintainer
 
+---
+
 <div align="center">
 
 **⭐ If this project helps you, please consider giving it a star! ⭐**
