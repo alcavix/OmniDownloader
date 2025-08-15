@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ###########################################################################
+  Project:      OmniDownloader
+  Version:      0.9.1
+  Author:       Tomer Alcavi
+  GitHub:       https://github.com/alcavix
+  Project Link: https://github.com/alcavix/OmniDownloader
+  License:      MIT
+
+  If you find this project useful, drop a star or fork!
+  Questions or ideas? Open an issue on the project’s GitHub page!
+  Please keep this little credit line. It means a lot for the open-source spirit :)
+  Grateful for the open-source community and spirit that inspires projects like this.
+  ###########################################################################
+-->
+<Application xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Class="OmniDownloader.App"
+             RequestedThemeVariant="Default">
+    <Application.Styles>
+        <FluentTheme />
+    </Application.Styles>
+    
+    <Application.Resources>
+        <!-- Resources will be added programmatically -->
+    </Application.Resources>
+</Application>
