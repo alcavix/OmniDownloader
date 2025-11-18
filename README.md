@@ -122,9 +122,9 @@ OmniDownloader.exe -url https://example.com/file.zip -post-action open
 
 ---
 
-## License
+## 📄 License
 
-MIT License. Use at your own risk.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details. Use at your own risk.
 This project is provided as-is for educational and demonstration purposes.
 
 ## 🙏 Acknowledgments
@@ -139,12 +139,16 @@ This project is provided as-is for educational and demonstration purposes.
 
 **⭐ If this project helps you, please consider giving it a star! ⭐**
 
-[![GitHub stars](https://img.shields.io/github/stars/alcavix/OmniDownloader.svg?style=social&label=Star)](https://github.com/alcavix/OmniDownloader)
-[![GitHub forks](https://img.shields.io/github/forks/alcavix/OmniDownloader.svg?style=social&label=Fork)](https://github.com/alcavix/OmniDownloader/fork)
+Made with ❤️ by the open-source community
+
+[![GitHub stars](https://img.shields.io/github/stars/alcavix/IntuneWin-Creator.svg?style=social&label=Star)](https://github.com/alcavix/OmniDownloader)
+[![GitHub forks](https://img.shields.io/github/forks/alcavix/IntuneWin-Creator.svg?style=social&label=Fork)](https://github.com/alcavix/OmniDownloader/fork)
 
 </div>
 
 ---
+
+This project was created with care and attention by **Tomer Alcavi**.
 
 If you find it useful or inspiring, you're welcome to explore and learn from it —  
 but please avoid re-publishing or presenting this work (in full or in part) under a different name or without proper credit.
